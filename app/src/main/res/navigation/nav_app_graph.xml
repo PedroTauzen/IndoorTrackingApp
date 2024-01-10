@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="pt.indoortrackingapp.ui.fragments.LoginFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="pt.indoortrackingapp.ui.fragments.SignUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_singUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+</navigation>
